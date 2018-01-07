@@ -10,6 +10,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
 
     if @blog.save
       redirect_to @blog, notice: 'Your blog was created successfully'

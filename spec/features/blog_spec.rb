@@ -16,6 +16,8 @@ describe 'navigate' do
 
   describe 'creation' do
     before do
+      user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jim", last_name: "Beam")
+      login_as(user, :scope => :user)
       visit new_blog_path
     end
 
@@ -30,6 +32,15 @@ describe 'navigate' do
       click_on "Save"
 
       expect(page).to have_content("Something here") 
+    end
+
+    it 'will have a user associated with it' do
+      fill_in 'blog[title]', with: "A title"
+      fill_in 'blog[date]', with: Date.today
+      fill_in 'blog[body]', with: "Whatever here"
+      click_on "Save"
+
+      expect(User.last.blogs.last.body).to eq("Whatever here")
     end
   end
 end
