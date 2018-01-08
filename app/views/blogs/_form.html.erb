@@ -1,0 +1,16 @@
+<%= render 'shared/nav' %>
+
+<%= form_for @blog do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+
+  <%= f.submit "Save", class: "btn btn-info" %>
+
+<% end %>

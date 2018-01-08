@@ -8,5 +8,7 @@
   <%= blog.inspect %>
   <hr>
 
+<%= link_to "Edit", edit_blog_path(blog) %>
+<%= link_to "Delete", blog_path(blog), method: :delete, date: { confirm: 'Are you sure?' } %>
 
 <% end %>
