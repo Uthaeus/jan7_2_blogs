@@ -1,5 +1,19 @@
 
+<h1><%= @blog.title.upcase %></h1>
+
 <%= render 'shared/nav' %>
 <hr>
 
-<%= @blog.inspect %>
+<div class="col-md-8">
+  <div class='container'>
+    <div class="col-md-2">
+      <span>Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</span>
+    </div>
+    <div class="col-md-6">
+      <%= @blog.body %>
+    </div>
+  </div>
+
+  <%= link_to 'Back', blogs_path, class: "btn btn-info btn-block" %>
+  <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-info btn-block" %>
+</div>

@@ -1,14 +1,27 @@
-<h1>Blogs Index</h1>
+<div class="container">
+  <h1>Blogs Index</h1>
 
-<%= render 'shared/nav' %>
+  <%= render 'shared/nav' %>
+</div>
 <hr>
 
-<% @blogs.each do |blog| %>
+<div>
+  <% @blogs.each do |blog| %>
+  <div class="col-md-6">
+    
+    <%= link_to blog.title, blog_path(blog) %>
+    <%= truncate(blog.body) %>
+    <%= blog.date %>
 
-  <%= blog.inspect %>
-  <hr>
+  </div>
+  <div class="col-md-6">
+    <div class="row">
+      <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-info btn-sm" %>
+      <%= link_to "Delete", blog_path(blog), class: "btn btn-info btn-sm", method: :delete, date: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>  
 
-<%= link_to "Edit", edit_blog_path(blog) %>
-<%= link_to "Delete", blog_path(blog), method: :delete, date: { confirm: 'Are you sure?' } %>
+  <% end %>
 
-<% end %>
+  <%= link_to "New Blog", new_blog_path, class: "btn btn-info" %>
+</div>

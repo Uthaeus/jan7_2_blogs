@@ -1,14 +1,10 @@
-<h1>New Blog</h1>
+<div class='col-md-8'>
+  <h1>New Blog</h1>
 
-<%= render 'shared/nav' %>
-<hr>
+  <%= render 'shared/nav' %>
+  <hr>
 
-<%= form_for @blog do |f| %>
+  <%= render 'form', blog: @blog %>
 
-  <%= f.text_field :title %>
-  <%= f.date_field :date %>
-  <%= f.text_area :body %>
-
-  <%= f.submit "Save" %>
-
-<% end %>
+  <%= link_to 'Back', blogs_path %>
+</div
