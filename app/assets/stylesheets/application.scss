@@ -1,3 +1,363 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "blogs.scss";
+
+body {
+  background-color: grey;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: blue;
+  padding: 10px;
+  width: 40%;
+  border-radius: 5px;
+}
+
+#calculation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: top;
+  font-size: 3rem;
+  word-break: break-all;
+  text-align: right;
+  padding-right: .8rem;
+  grid-column: 1/5;
+  grid-row: 1;
+  background-color: black;
+  border-radius: 2px;
+  color: white;
+}
+
+#answer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 3rem;
+  text-align: right;
+  padding-right: .8rem;
+  grid-column: 1/5;
+  grid-row: 2;
+  background-color: black;
+  border-radius: 2px;
+  color: white;
+}
+
+#back {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#back:hover {
+  background-color: red;
+}
+
+#ce {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#ce:hover {
+  background-color: red;
+}
+
+#c {
+  grid-column: 3;
+  grid-row: 3;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#c:hover {
+  background-color: red;
+}
+
+#divide {
+  grid-column: 4;
+  grid-row: 3;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#divide:hover {
+  background-color: gold;
+}
+
+#seven {
+  grid-column: 1;
+  grid-row: 4;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#seven:hover {
+  background-color: silver;
+}
+
+#eight {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#eight:hover {
+  background-color: silver;
+}
+
+#nine {
+  grid-column: 3;
+  grid-row: 4;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#nine:hover {
+  background-color: silver;
+}
+
+#multiply {
+  grid-column: 4;
+  grid-row: 4;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#multiply:hover {
+  background-color: gold;
+}
+
+#four {
+  grid-column: 1;
+  grid-row: 5;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#four:hover {
+  background-color: silver;
+}
+
+#five {
+  grid-column: 2;
+  grid-row: 5;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#five:hover {
+  background-color: silver;
+}
+
+#six {
+  grid-column: 3;
+  grid-row: 5;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#six:hover {
+  background-color: silver;
+}
+
+#minus {
+  grid-column: 4;
+  grid-row: 5;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#minus:hover {
+  background-color: gold;
+}
+
+#one {
+  grid-column: 1;
+  grid-row: 6;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#one:hover {
+  background-color: silver;
+}
+
+#two {
+  grid-column: 2;
+  grid-row: 6;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#two:hover {
+  background-color: silver;
+}
+
+#three {
+  grid-column: 3;
+  grid-row: 6;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#three:hover {
+  background-color: silver;
+}
+
+#add {
+  grid-column: 4;
+  grid-row: 6;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#add:hover {
+  background-color: gold;
+}
+
+.blank {
+  grid-column: 1;
+  grid-row: 7;
+  background-color: grey;
+  border-radius: 2px;
+}
+
+#zero {
+  grid-column: 2;
+  grid-row: 7;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#zero:hover {
+  background-color: silver;
+}
+
+#dot {
+  grid-column: 3;
+  grid-row: 7;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#dot:hover {
+  background-color: gold;
+}
+
+#equals {
+  grid-column: 4;
+  grid-row: 7;
+  background-color: grey;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  border-radius: 2px;
+}
+
+#equals:hover {
+  background-color: orange;
+}
